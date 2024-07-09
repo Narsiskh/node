@@ -5,8 +5,8 @@
 const names = require('./4-names')
 const sayHi = require('./5-utils')
 /* console.log(names) // { john: 'john', peter: 'peter' } */
-
-
+const data = require('./6-alternative')
+console.log(data)
 
 sayHi('Susan')
 sayHi(names.john)
