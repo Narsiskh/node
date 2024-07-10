@@ -9,6 +9,6 @@ const second = readFileSync('./content/second', 'utf8');
 
 // If the file is not there, Node will create one.
 writeFileSync('./content/result-sync',
-    `Here is the result : ${first}, ${second}`,
-    { flag: 'a' }
+        `Here is the result : ${first}, ${second}`,
+        { flag: 'a' }
 );
