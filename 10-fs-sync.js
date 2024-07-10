@@ -1,4 +1,5 @@
 const {readFileSync, writeFileSync} = require('fs');
+console.log('start')
 // Or
 // const fs = require('fs');
 // fs.readFileSync()
@@ -12,3 +13,9 @@ writeFileSync('./content/result-sync',
         `Here is the result : ${first}, ${second}`,
         { flag: 'a' }
 );
+console.log('done with this task')
+console.log('starting the next one')
+// start
+// done with this task
+// starting the next one
+
