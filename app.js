@@ -1,18 +1,16 @@
-// Modules
-// CommonJS => Every file in Node is a module. (by default)
-// Modules - Encapsulated code (only share minimum)
+const path = require("path");
 
-const names = require('./4-names')
-const sayHi = require('./5-utils')
-/* console.log(names) // { john: 'john', peter: 'peter' } */
-const data = require('./6-alternative')
-// console.log(data)
+console.log(path.sep) // /
 
-require('./7-mind-grenade') //the sum is 15
+const filePath = path.join('/content', 'subfolder', 'test')
+console.log(filePath); // /content/subfolder/test
 
-// sayHi('Susan')
-// sayHi(names.john)
-// sayHi(names.peter)
-//Hello there Susan
-// Hello there john
-// Hello there peter
+const base = path.basename(filePath)
+console.log(base); // //content/subfolder/test
+                      // test
+
+const absolute = path.resolve(__dirname, 'content', 'subfolder', 'test')
+console.log(absolute);
+// /content/subfolder/test
+// test
+// /home/narsis/Project/node/content/subfolder/test
