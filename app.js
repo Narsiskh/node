@@ -1,14 +1,8 @@
-const {readFileSync, writeFileSync} = require('fs');
-// Or
-// const fs = require('fs');
-// fs.readFileSync()
-const first = readFileSync('./content/first', 'utf8');
-const second = readFileSync('./content/second', 'utf8');
+const http = require('http');
 
-// console.log(first, second) // Hello this is the first text file Hello this is the second text file
+const server = http.createServer((req, res) => {
+    res.write('Welcome to our home page')
+    res.end()
+})
 
-// If the file is not there, Node will create one.
-writeFileSync('./content/result-sync',
-    `Here is the result : ${first}, ${second}`,
-    { flag: 'a' }
-);
+server.listen(5000)
