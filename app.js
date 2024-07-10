@@ -1,16 +1,14 @@
-const path = require("path");
+const {readFileSync, writeFileSync} = require('fs');
+// Or
+// const fs = require('fs');
+// fs.readFileSync()
+const first = readFileSync('./content/first', 'utf8');
+const second = readFileSync('./content/second', 'utf8');
 
-console.log(path.sep) // /
+// console.log(first, second) // Hello this is the first text file Hello this is the second text file
 
-const filePath = path.join('/content', 'subfolder', 'test')
-console.log(filePath); // /content/subfolder/test
-
-const base = path.basename(filePath)
-console.log(base); // //content/subfolder/test
-                      // test
-
-const absolute = path.resolve(__dirname, 'content', 'subfolder', 'test')
-console.log(absolute);
-// /content/subfolder/test
-// test
-// /home/narsis/Project/node/content/subfolder/test
+// If the file is not there, Node will create one.
+writeFileSync('./content/result-sync',
+    `Here is the result : ${first}, ${second}`,
+    { flag: 'a' }
+);
