@@ -1,0 +1,28 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1-intro.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Narsiskh/node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Narsiskh/node/issues"
+  },
+  "homepage": "https://github.com/Narsiskh/node#readme",
+  "keywords": [],
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
